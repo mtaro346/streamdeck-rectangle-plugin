@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Rectangle Action Settings</title>
+		<meta charset="utf-8" />
+		<script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+		<style>
+			.row {
+				display: flex !important;
+				align-items: center;
+				gap: 8px;
+				width: 100%;
+			}
+			.row > sdpi-range {
+				flex: 1 1 auto !important;
+				min-width: 120px !important;
+				max-width: none !important;
+				width: auto !important;
+			}
+			.row > input.value-input {
+				flex: 0 0 64px;
+				width: 64px;
+				box-sizing: border-box;
+				background: var(--sdpi-bgcolor, #2d2d2d);
+				color: var(--sdpi-color, #d8d8d8);
+				border: 1px solid var(--sdpi-bdcolor, #3d3d3d);
+				border-radius: 4px;
+				padding: 4px 6px;
+				font: inherit;
+				text-align: right;
+			}
+			.row > input.value-input:focus {
+				outline: 1px solid #4f8cff;
+				border-color: #4f8cff;
+			}
+			.row > input.value-input::-webkit-outer-spin-button,
+			.row > input.value-input::-webkit-inner-spin-button {
+				margin: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<sdpi-item label="Long Press Action">
+			<sdpi-select setting="longPressAction" default="" placeholder="None — disable long press">
+				<option value="">None — disable long press</option>
+				<option value="left-half">Left Half</option>
+				<option value="right-half">Right Half</option>
+				<option value="top-half">Top Half</option>
+				<option value="bottom-half">Bottom Half</option>
+				<option value="top-left">Top Left (1/4)</option>
+				<option value="top-right">Top Right (1/4)</option>
+				<option value="bottom-left">Bottom Left (1/4)</option>
+				<option value="bottom-right">Bottom Right (1/4)</option>
+				<option value="first-third">Left Third (1/3)</option>
+				<option value="center-third">Center Third (1/3)</option>
+				<option value="last-third">Right Third (1/3)</option>
+				<option value="first-two-thirds">Left Two-Thirds (2/3)</option>
+				<option value="last-two-thirds">Right Two-Thirds (2/3)</option>
+				<option value="top-left-sixth">Top Left Sixth (1/6)</option>
+				<option value="top-center-sixth">Top Center Sixth (1/6)</option>
+				<option value="top-right-sixth">Top Right Sixth (1/6)</option>
+				<option value="bottom-left-sixth">Bottom Left Sixth (1/6)</option>
+				<option value="bottom-center-sixth">Bottom Center Sixth (1/6)</option>
+				<option value="bottom-right-sixth">Bottom Right Sixth (1/6)</option>
+				<option value="maximize">Maximize</option>
+				<option value="almost-maximize">Almost Maximize</option>
+				<option value="center">Center</option>
+				<option value="center-half">Center Half</option>
+				<option value="restore">Restore</option>
+				<option value="larger">Larger</option>
+				<option value="smaller">Smaller</option>
+				<option value="next-display">Next Display</option>
+				<option value="previous-display">Previous Display</option>
+			</sdpi-select>
+		</sdpi-item>
+		<sdpi-item label="Hold Time (ms)">
+			<div class="row">
+				<sdpi-range id="hold-range" setting="longPressMs" min="250" max="1500" step="50" default="500" showlabels></sdpi-range>
+				<input class="value-input" id="hold-num" type="number" min="250" max="1500" step="50" />
+			</div>
+		</sdpi-item>
+		<sdpi-item label="Badge X (%)">
+			<div class="row">
+				<sdpi-range id="badgex-range" setting="badgeX" min="0" max="100" step="1" default="68" showlabels></sdpi-range>
+				<input class="value-input" id="badgex-num" type="number" min="0" max="100" step="1" />
+			</div>
+		</sdpi-item>
+		<sdpi-item label="Badge Y (%)">
+			<div class="row">
+				<sdpi-range id="badgey-range" setting="badgeY" min="0" max="100" step="1" default="68" showlabels></sdpi-range>
+				<input class="value-input" id="badgey-num" type="number" min="0" max="100" step="1" />
+			</div>
+		</sdpi-item>
+
+		<script>
+			(function () {
+				function bind(rangeId, numId) {
+					const range = document.getElementById(rangeId);
+					const num = document.getElementById(numId);
+					if (!range || !num) return;
+
+					let last = null;
+
+					function readRange() {
+						const v = range.value;
+						return v == null || v === "" ? null : String(v);
+					}
+
+					function tick() {
+						const v = readRange();
+						if (v != null && v !== last && document.activeElement !== num) {
+							num.value = v;
+							last = v;
+						}
+						requestAnimationFrame(tick);
+					}
+					requestAnimationFrame(tick);
+
+					num.addEventListener("change", () => {
+						const min = Number(num.min);
+						const max = Number(num.max);
+						let n = Number(num.value);
+						if (!Number.isFinite(n)) return;
+						if (Number.isFinite(min)) n = Math.max(min, n);
+						if (Number.isFinite(max)) n = Math.min(max, n);
+						num.value = String(n);
+						range.value = String(n);
+						range.dispatchEvent(new Event("input", { bubbles: true, composed: true }));
+						range.dispatchEvent(new Event("change", { bubbles: true, composed: true }));
+						last = String(n);
+					});
+				}
+
+				document.addEventListener("DOMContentLoaded", () => {
+					bind("hold-range", "hold-num");
+					bind("badgex-range", "badgex-num");
+					bind("badgey-range", "badgey-num");
+				});
+			})();
+		</script>
+	</body>
+</html>

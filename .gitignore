@@ -1,0 +1,7 @@
+node_modules/
+com.asuka.rectangle.sdPlugin/node_modules/
+com.asuka.rectangle.sdPlugin/bin/
+com.asuka.rectangle.sdPlugin/logs/
+com.asuka.rectangle.streamDeckPlugin
+*.log
+.DS_Store

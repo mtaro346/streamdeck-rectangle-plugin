@@ -1,0 +1,11 @@
+{
+  "name": "com.asuka.rectangle",
+  "version": "0.1.0",
+  "description": "Stream Deck plugin that triggers Rectangle window-management actions via rectangle:// URL scheme",
+  "type": "module",
+  "private": true,
+  "main": "bin/plugin.js",
+  "engines": {
+    "node": ">=20.5.1"
+  }
+}

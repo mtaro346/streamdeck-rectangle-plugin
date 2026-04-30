@@ -1,0 +1,33 @@
+{
+  "name": "streamdeck-rectangle-dev",
+  "version": "0.1.0",
+  "description": "Stream Deck plugin that triggers Rectangle.app window-management actions via the rectangle:// URL scheme.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "author": "asuka",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w --watch.onEnd=\"streamdeck restart com.asuka.rectangle\"",
+    "install:plugin": "cd com.asuka.rectangle.sdPlugin && npm install --omit=optional --no-audit --no-fund",
+    "install:all": "npm install && npm run install:plugin",
+    "pack": "streamdeck pack com.asuka.rectangle.sdPlugin --force",
+    "validate": "streamdeck validate com.asuka.rectangle.sdPlugin",
+    "link": "streamdeck link com.asuka.rectangle.sdPlugin",
+    "restart": "streamdeck restart com.asuka.rectangle",
+    "icons": "node scripts/make-icons.mjs"
+  },
+  "devDependencies": {
+    "@elgato/cli": "^1.7.4",
+    "@elgato/streamdeck": "^2.1.0",
+    "@rollup/plugin-commonjs": "^28.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.0",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^22.0.0",
+    "rollup": "^4.21.0",
+    "tslib": "^2.7.0",
+    "typescript": "^5.5.0"
+  }
+}

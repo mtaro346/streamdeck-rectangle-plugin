@@ -1,0 +1,531 @@
+{
+  "Name": "Rectangle",
+  "Version": "0.1.0.0",
+  "Author": "asuka",
+  "Actions": [
+    {
+      "Name": "Left Half",
+      "UUID": "com.asuka.rectangle.left-half",
+      "Icon": "imgs/actions/left-half/icon",
+      "Tooltip": "Snap window to the left half of the screen",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/left-half/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Right Half",
+      "UUID": "com.asuka.rectangle.right-half",
+      "Icon": "imgs/actions/right-half/icon",
+      "Tooltip": "Snap window to the right half of the screen",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/right-half/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Top Half",
+      "UUID": "com.asuka.rectangle.top-half",
+      "Icon": "imgs/actions/top-half/icon",
+      "Tooltip": "Snap window to the top half of the screen",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/top-half/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Bottom Half",
+      "UUID": "com.asuka.rectangle.bottom-half",
+      "Icon": "imgs/actions/bottom-half/icon",
+      "Tooltip": "Snap window to the bottom half of the screen",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/bottom-half/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Top Left",
+      "UUID": "com.asuka.rectangle.top-left",
+      "Icon": "imgs/actions/top-left/icon",
+      "Tooltip": "Snap window to the top-left quarter",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/top-left/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Top Right",
+      "UUID": "com.asuka.rectangle.top-right",
+      "Icon": "imgs/actions/top-right/icon",
+      "Tooltip": "Snap window to the top-right quarter",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/top-right/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Bottom Left",
+      "UUID": "com.asuka.rectangle.bottom-left",
+      "Icon": "imgs/actions/bottom-left/icon",
+      "Tooltip": "Snap window to the bottom-left quarter",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/bottom-left/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Bottom Right",
+      "UUID": "com.asuka.rectangle.bottom-right",
+      "Icon": "imgs/actions/bottom-right/icon",
+      "Tooltip": "Snap window to the bottom-right quarter",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/bottom-right/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Left Third",
+      "UUID": "com.asuka.rectangle.first-third",
+      "Icon": "imgs/actions/first-third/icon",
+      "Tooltip": "Snap window to the first (left) third",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/first-third/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Center Third",
+      "UUID": "com.asuka.rectangle.center-third",
+      "Icon": "imgs/actions/center-third/icon",
+      "Tooltip": "Snap window to the center third",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/center-third/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Right Third",
+      "UUID": "com.asuka.rectangle.last-third",
+      "Icon": "imgs/actions/last-third/icon",
+      "Tooltip": "Snap window to the last (right) third",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/last-third/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Left Two-Thirds",
+      "UUID": "com.asuka.rectangle.first-two-thirds",
+      "Icon": "imgs/actions/first-two-thirds/icon",
+      "Tooltip": "Snap window to the first two-thirds (left)",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/first-two-thirds/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Right Two-Thirds",
+      "UUID": "com.asuka.rectangle.last-two-thirds",
+      "Icon": "imgs/actions/last-two-thirds/icon",
+      "Tooltip": "Snap window to the last two-thirds (right)",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/last-two-thirds/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Top Left Sixth",
+      "UUID": "com.asuka.rectangle.top-left-sixth",
+      "Icon": "imgs/actions/top-left-sixth/icon",
+      "Tooltip": "Snap window to the top-left sixth (3x2 grid)",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/top-left-sixth/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Top Center Sixth",
+      "UUID": "com.asuka.rectangle.top-center-sixth",
+      "Icon": "imgs/actions/top-center-sixth/icon",
+      "Tooltip": "Snap window to the top-center sixth (3x2 grid)",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/top-center-sixth/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Top Right Sixth",
+      "UUID": "com.asuka.rectangle.top-right-sixth",
+      "Icon": "imgs/actions/top-right-sixth/icon",
+      "Tooltip": "Snap window to the top-right sixth (3x2 grid)",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/top-right-sixth/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Bottom Left Sixth",
+      "UUID": "com.asuka.rectangle.bottom-left-sixth",
+      "Icon": "imgs/actions/bottom-left-sixth/icon",
+      "Tooltip": "Snap window to the bottom-left sixth (3x2 grid)",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/bottom-left-sixth/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Bottom Center Sixth",
+      "UUID": "com.asuka.rectangle.bottom-center-sixth",
+      "Icon": "imgs/actions/bottom-center-sixth/icon",
+      "Tooltip": "Snap window to the bottom-center sixth (3x2 grid)",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/bottom-center-sixth/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Bottom Right Sixth",
+      "UUID": "com.asuka.rectangle.bottom-right-sixth",
+      "Icon": "imgs/actions/bottom-right-sixth/icon",
+      "Tooltip": "Snap window to the bottom-right sixth (3x2 grid)",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/bottom-right-sixth/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Maximize",
+      "UUID": "com.asuka.rectangle.maximize",
+      "Icon": "imgs/actions/maximize/icon",
+      "Tooltip": "Maximize window to fill the screen",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/maximize/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Almost Maximize",
+      "UUID": "com.asuka.rectangle.almost-maximize",
+      "Icon": "imgs/actions/almost-maximize/icon",
+      "Tooltip": "Maximize window with a small margin",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/almost-maximize/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Center",
+      "UUID": "com.asuka.rectangle.center",
+      "Icon": "imgs/actions/center/icon",
+      "Tooltip": "Center window without resizing",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/center/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Center Half",
+      "UUID": "com.asuka.rectangle.center-half",
+      "Icon": "imgs/actions/center-half/icon",
+      "Tooltip": "Center window at half size",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/center-half/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Restore",
+      "UUID": "com.asuka.rectangle.restore",
+      "Icon": "imgs/actions/restore/icon",
+      "Tooltip": "Restore window to its previous size and position",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/restore/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Larger",
+      "UUID": "com.asuka.rectangle.larger",
+      "Icon": "imgs/actions/larger/icon",
+      "Tooltip": "Make window larger",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/larger/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Smaller",
+      "UUID": "com.asuka.rectangle.smaller",
+      "Icon": "imgs/actions/smaller/icon",
+      "Tooltip": "Make window smaller",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/smaller/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Next Display",
+      "UUID": "com.asuka.rectangle.next-display",
+      "Icon": "imgs/actions/next-display/icon",
+      "Tooltip": "Move window to the next display",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/next-display/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    },
+    {
+      "Name": "Previous Display",
+      "UUID": "com.asuka.rectangle.previous-display",
+      "Icon": "imgs/actions/previous-display/icon",
+      "Tooltip": "Move window to the previous display",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/previous-display/key",
+          "TitleAlignment": "bottom",
+          "ShowTitle": false
+        }
+      ],
+      "DisableAutomaticStates": true,
+      "PropertyInspectorPath": "ui/inspector.html"
+    }
+  ],
+  "Category": "Rectangle",
+  "CategoryIcon": "imgs/plugin/category-icon",
+  "CodePath": "bin/plugin.js",
+  "Description": "Trigger Rectangle window-management actions from Stream Deck via the rectangle:// URL scheme.",
+  "Icon": "imgs/plugin/marketplace",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "6.5"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "12"
+    }
+  ],
+  "Nodejs": {
+    "Version": "20",
+    "Debug": "enabled"
+  },
+  "UUID": "com.asuka.rectangle"
+}
