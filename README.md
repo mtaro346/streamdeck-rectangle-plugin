@@ -34,7 +34,40 @@
 - **バッジ位置カスタム**: 長押しサブアイコンの表示位置（X/Y % 0–100）をスライダで自由配置。デフォルトは右下 (68%, 68%)
 - **常駐リソースなし**: URL スキームを呼ぶだけなのでバックグラウンド常駐プロセスはゼロ。Rectangle 本体に処理を委譲
 
-## ディレクトリ構成
+## インストール（一般ユーザー向け）
+
+エンジニアでない方も以下の 4 ステップだけで使えます。
+
+### 事前に必要なもの
+
+1. **macOS 12 以降** の Mac
+2. **[Rectangle.app](https://rectangleapp.com/)** をインストールして起動しておく（無料・公式サイトから）
+3. **[Stream Deck アプリ](https://www.elgato.com/jp/ja/s/downloads)** をインストールして起動しておく（Elgato 公式・無料）
+
+### インストール手順
+
+1. このリポジトリの **[Releases ページ](https://github.com/mtaro346/streamdeck-rectangle-plugin/releases/latest)** を開く
+2. 「Assets」セクションの **`com.asuka.rectangle.streamDeckPlugin`** をクリックしてダウンロード
+3. ダウンロードしたファイルを **ダブルクリック**
+4. Stream Deck アプリにインストール確認ダイアログが出るので **「Install」** をクリック
+
+これで完了です。Stream Deck アプリの右サイドバーに **Rectangle** カテゴリが現れます。使いたいアクション（例: `Left Half`、`Maximize` 等）をキーへドラッグするだけで設定不要で動作します。
+
+### 長押しで別アクション
+
+キーに割り当てたあと、右側の Property Inspector で「Long Press Action」を選ぶと、長押し（既定 0.5 秒）で別のレイアウトを発動できます（例: タップで `Left Half` / 長押しで `Maximize`）。サブアイコンの位置はスライダで自由に動かせます。
+
+### 初回のみ
+
+最初にどれかキーを押したとき macOS が「`open` が `Rectangle` を制御することを許可しますか？」と聞いてきたら **「許可」** を選んでください。これは macOS のセキュリティ機能で、一度許可すれば以降は何も聞かれません。
+
+### アンインストール
+
+Stream Deck アプリ右下の歯車 → 「Plugins」 → Rectangle の右の `...` → 「Uninstall」。
+
+---
+
+## ディレクトリ構成（開発者向け）
 
 ```
 src/
@@ -52,7 +85,7 @@ scripts/
   make-icons.mjs            SVG→PNG 一括生成（sips利用）
 ```
 
-## セットアップ
+## 開発者向けセットアップ（自分でビルドする場合）
 
 ```bash
 npm install
