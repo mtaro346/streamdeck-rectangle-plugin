@@ -1,8 +1,15 @@
-# Stream Deck Rectangle
+# Stream Deck Rectangle Plugin
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![macOS](https://img.shields.io/badge/macOS-12%2B-blue)](https://www.apple.com/macos/)
 [![Stream Deck SDK](https://img.shields.io/badge/Stream%20Deck-SDK%20v2-black)](https://docs.elgato.com/streamdeck/sdk/)
+[![Unofficial](https://img.shields.io/badge/Status-Unofficial-orange)](#)
+
+> ⚠️ **非公式プラグイン (Unofficial)** — このリポジトリは個人開発のサードパーティ製プラグインです。
+> [Rectangle](https://rectangleapp.com/) 公式（Ryan Hanson 氏）および [Elgato](https://www.elgato.com/) 公式とは一切関係がありません。
+> 不具合・要望は本リポジトリの Issue へお願いします（Rectangle / Elgato への問い合わせは無効です）。
+>
+> **Unofficial third-party plugin.** Not affiliated with, endorsed by, or supported by the Rectangle project (Ryan Hanson) or Elgato. Issues should be filed in this repository, not upstream.
 
 [Rectangle.app](https://rectangleapp.com/) のウインドウ管理アクションを Stream Deck から呼び出すプラグイン。各アクションが `rectangle://execute-action?name=<name>` URL を `open -g` で発火する（フォアグラウンドを奪わずに Rectangle がサイレントに処理）。
 
